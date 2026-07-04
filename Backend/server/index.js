@@ -76,7 +76,7 @@ app.post('/api/convert', upload.single('file'), requireUser, async (req, res) =>
 
 function runMarkItDown(filePath) {
   return new Promise((resolve, reject) => {
-    execFile('py', ['-m', 'markitdown', filePath], { maxBuffer: 1024 * 1024 * 20 }, (err, stdout, stderr) => {
+    execFile('markitdown', [filePath], { maxBuffer: 1024 * 1024 * 20 }, (err, stdout, stderr) => {
       // On Linux/macOS hosts (e.g. Render, Railway) use 'markitdown' directly instead of 'py -m markitdown'.
       if (err) return reject(new Error(stderr || err.message))
       resolve(stdout)
