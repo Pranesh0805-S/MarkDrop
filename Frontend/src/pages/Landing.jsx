@@ -23,7 +23,6 @@ export default function Landing() {
           </p>
           <div style={{ ...s.ctaRow, animationDelay: '.24s' }} className="fade-up">
             <Link to="/app" style={s.ctaPrimary} className="cta-primary">Convert a file →</Link>
-            <a href="#how" style={s.ctaSecondary} className="link-hover">See how it works</a>
           </div>
         </div>
       </section>
