@@ -89,7 +89,6 @@ export default function ForgotPassword() {
 
   return (
     <div style={s.page}>
-      <Link to="/" style={s.logo}><span style={s.dot} />Markdrop</Link>
 
       <div style={s.card} className="fade-up">
         {step === 'email' && (
