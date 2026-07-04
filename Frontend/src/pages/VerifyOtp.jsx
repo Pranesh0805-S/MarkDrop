@@ -46,7 +46,6 @@ export default function VerifyOtp() {
 
   return (
     <div style={s.page}>
-      <Link to="/" style={s.logo}><span style={s.dot} />Markdrop</Link>
 
       <div style={s.card} className="fade-up">
         <h1 style={s.h1}>Check your email</h1>
