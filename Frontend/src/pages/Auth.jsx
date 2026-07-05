@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Github, Mail, Lock, ArrowRight, Apple, Loader2, Check, X } from 'lucide-react'
+import { Github, Mail, Lock, ArrowRight, Loader2, Check, X } from 'lucide-react'
 import { supabase } from '../lib/supabaseClient.js'
 import { validateEmail, passwordFailures } from '../utils/validation.js'
 import FieldHint from '../components/FieldHint.jsx'
@@ -88,15 +88,7 @@ export default function Auth() {
             <Github size={18} />
             Continue with GitHub
           </button>
-          <button style={s.oauthBtn} className="oauth-btn" onClick={() => handleOAuth('azure')}>
-            <MicrosoftIcon />
-            Continue with Microsoft
-          </button>
-          <button style={s.oauthBtn} className="oauth-btn" onClick={() => handleOAuth('apple')}>
-            <Apple size={18} />
-            Continue with Apple
-          </button>
-        </div>
+          </div>
 
         <div style={s.dividerRow}>
           <div style={s.dividerLine} />
@@ -186,16 +178,7 @@ function GoogleIcon() {
     </svg>
   )
 }
-function MicrosoftIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 16 16">
-      <rect x="0" y="0" width="7.5" height="7.5" fill="#F35325" />
-      <rect x="8.5" y="0" width="7.5" height="7.5" fill="#81BC06" />
-      <rect x="0" y="8.5" width="7.5" height="7.5" fill="#05A6F0" />
-      <rect x="8.5" y="8.5" width="7.5" height="7.5" fill="#FFBA08" />
-    </svg>
-  )
-}
+
 
 const s = {
   page: { minHeight: '100vh', background: 'var(--ink)', color: 'var(--paper)', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px 20px' },
